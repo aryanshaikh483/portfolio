@@ -47,20 +47,19 @@ export default function About() {
           <FadeSection delay={0.2}>
             <div className="grid grid-cols-1 gap-3">
               {highlights.map((h, i) => (
-                <motion.div
+                <div
                   key={h.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="flex items-start gap-4 p-4 rounded-xl border border-white/8 bg-white/3 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all duration-300"
+                  className="flex items-start gap-4 p-4 rounded-xl border border-white/8 bg-white/3"
+                  style={{ transition: "border-color 120ms ease, background-color 120ms ease" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(139,92,246,0.3)"; e.currentTarget.style.backgroundColor = "rgba(139,92,246,0.05)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = ""; e.currentTarget.style.backgroundColor = ""; }}
                 >
                   <span className="text-2xl mt-0.5">{h.icon}</span>
                   <div>
                     <div className="text-white text-base font-semibold">{h.title}</div>
                     <div className="text-zinc-500 text-sm mt-0.5">{h.sub}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </FadeSection>

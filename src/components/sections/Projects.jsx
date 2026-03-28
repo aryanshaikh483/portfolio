@@ -53,14 +53,12 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {projects.map((p, i) => (
-            <motion.div
+            <div
               key={p.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
-              whileHover={{ y: -4 }}
-              className="group relative rounded-2xl border border-white/8 bg-white/3 p-7 overflow-hidden transition-all duration-300 hover:border-white/15"
+              className="group relative rounded-2xl border border-white/8 bg-white/3 p-7 overflow-hidden"
+              style={{ transition: "border-color 120ms ease, transform 120ms ease", willChange: "transform" }}
+              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-3px)"}
+              onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
             >
               {/* Accent glow on hover */}
               <div
@@ -106,7 +104,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

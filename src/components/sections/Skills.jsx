@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import FadeSection from "../ui/FadeSection";
 
 const BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
@@ -65,15 +64,13 @@ export default function Skills() {
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-3">
-                {group.skills.map((s, si) => (
-                  <motion.div
+                {group.skills.map((s) => (
+                  <div
                     key={s.name}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: gi * 0.04 + si * 0.04 }}
-                    whileHover={{ y: -3, scale: 1.05 }}
-                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border border-white/8 bg-white/3 hover:border-white/20 hover:bg-white/6 transition-all duration-200 cursor-default"
+                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border border-white/8 bg-white/3 cursor-default"
+                    style={{ transition: "border-color 120ms ease, background-color 120ms ease, transform 120ms ease", willChange: "transform" }}
+                    onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"}
+                    onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
                   >
                     <img
                       src={s.logo}
@@ -84,7 +81,7 @@ export default function Skills() {
                       style={{ filter: s.name === "Next.js" || s.name === "GitHub" ? "invert(1)" : "none" }}
                     />
                     <span className="text-base text-zinc-300 font-medium">{s.name}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </FadeSection>

@@ -40,7 +40,7 @@ export default function Hero() {
                 </div>
                 <h2 className="text-white font-bold text-xl">Aryan Shaikh</h2>
                 <p className="text-zinc-400 text-sm mt-1 leading-relaxed">
-                  CSE Student &amp; AI/ML enthusiast
+                  CSE Student 
                 </p>
 
                 {/* Social links */}

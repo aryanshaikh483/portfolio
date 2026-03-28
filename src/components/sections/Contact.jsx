@@ -52,29 +52,26 @@ export default function Contact() {
         <FadeSection delay={0.15}>
           <div className="grid sm:grid-cols-3 gap-4">
             {links.map((l, i) => (
-              <motion.a
+              <a
                 key={l.label}
                 href={l.href}
                 target={l.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={l.label === "Email" ? { scale: 1.05 } : { y: -4 }}
-                whileTap={l.label === "Email" ? { scale: 0.97 } : {}}
-                className={`group flex flex-col items-center gap-3 p-6 rounded-2xl border transition-all duration-300 ${
+                className={`flex flex-col items-center gap-3 p-6 rounded-2xl border ${
                   l.label === "Email"
-                    ? "border-[#a78bfa]/40 bg-[#a78bfa]/5 hover:bg-[#a78bfa]/10 hover:shadow-lg hover:shadow-[#a78bfa]/20"
-                    : "border-white/8 bg-white/3 hover:border-white/15"
+                    ? "border-[#a78bfa]/40 bg-[#a78bfa]/5"
+                    : "border-white/8 bg-white/3"
                 }`}
+                style={{ transition: "border-color 120ms ease, background-color 120ms ease, transform 120ms ease, box-shadow 120ms ease", willChange: "transform" }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 <span>{l.icon}</span>
                 <span className="text-sm text-zinc-500 uppercase tracking-widest">{l.label}</span>
                 <span className="text-base font-medium transition" style={{ color: l.color }}>
                   {l.value}
                 </span>
-              </motion.a>
+              </a>
             ))}
           </div>
         </FadeSection>

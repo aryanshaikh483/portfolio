@@ -40,10 +40,11 @@ export default function Experience() {
           <div className="flex flex-col gap-8">
             {experiences.map((e, i) => (
               <FadeSection key={e.role} delay={i * 0.1}>
-                <motion.div
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                <div
                   className="relative pl-16"
+                  style={{ transition: "transform 120ms ease", willChange: "transform" }}
+                  onMouseEnter={e => e.currentTarget.style.transform = "translateX(3px)"}
+                  onMouseLeave={e => e.currentTarget.style.transform = "translateX(0)"}
                 >
                   {/* Timeline dot */}
                   <div className="absolute left-4 top-6 -translate-x-1/2 flex flex-col items-center">
@@ -103,7 +104,7 @@ export default function Experience() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </FadeSection>
             ))}
           </div>
