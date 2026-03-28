@@ -39,10 +39,10 @@ export default function Nav() {
         <div className="relative flex justify-center px-6 py-0">
 
           {/* Centered pill nav — desktop */}
-          <div className={`hidden md:flex items-center gap-1 px-2 py-1.5 rounded-2xl border transition-all duration-500 ${
+          <div className={`hidden md:flex items-center gap-1 px-2 py-1.5 rounded-2xl transition-all duration-500 ${
             scrolled
-              ? "bg-[#0d0d14]/80 border-white/10 backdrop-blur-xl shadow-xl shadow-black/30"
-              : "bg-white/5 border-white/8 backdrop-blur-md"
+              ? "glass shadow-xl shadow-black/30"
+              : "bg-white/4 border border-white/8 backdrop-blur-md"
           }`}>
             {links.map((l) => {
               const id = l.toLowerCase();
@@ -114,7 +114,7 @@ export default function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-20 left-4 right-4 z-40 rounded-2xl border border-white/10 bg-[#0d0d14]/95 backdrop-blur-xl shadow-2xl p-4 md:hidden"
+            className="glass fixed top-20 left-4 right-4 z-40 rounded-2xl shadow-2xl p-4 md:hidden"
           >
             {links.map((l, i) => (
               <motion.a

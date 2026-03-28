@@ -21,8 +21,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="rounded-3xl border border-white/10 bg-white/4 backdrop-blur-md p-8 md:p-12 shadow-2xl"
-          style={{ boxShadow: "0 0 80px rgba(124,58,237,0.12), 0 0 40px rgba(249,115,22,0.06)" }}
+          className="glass rounded-3xl p-8 md:p-12"
+          style={{ boxShadow: "0 0 80px rgba(124,58,237,0.15), 0 0 40px rgba(249,115,22,0.08), 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.07)" }}
         >
           <div className="flex flex-col md:flex-row gap-10 items-center">
 
@@ -33,10 +33,13 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.7 }}
               className="shrink-0 w-full md:w-64"
             >
-              <div className="rounded-2xl border border-white/10 bg-white/6 p-5 text-center">
+              <div className="glass rounded-2xl p-5 text-center">
                 {/* Avatar placeholder */}
                 <div className="w-40 h-40 mx-auto rounded-2xl bg-linear-to-br from-violet-600/40 to-orange-500/30 border border-white/10 flex items-center justify-center mb-4 overflow-hidden">
-                  <span className="text-6xl">👤</span>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(167,139,250,0.6)" strokeWidth="1.2">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                  </svg>
                 </div>
                 <h2 className="text-white font-bold text-xl">Aryan Shaikh</h2>
                 <p className="text-zinc-400 text-sm mt-1 leading-relaxed">

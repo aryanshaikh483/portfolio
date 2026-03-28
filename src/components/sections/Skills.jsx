@@ -67,10 +67,7 @@ export default function Skills() {
                 {group.skills.map((s) => (
                   <div
                     key={s.name}
-                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border border-white/8 bg-white/3 cursor-default"
-                    style={{ transition: "border-color 120ms ease, background-color 120ms ease, transform 120ms ease", willChange: "transform" }}
-                    onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"}
-                    onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
+                    className="glass glass-lift flex items-center gap-2.5 px-4 py-2.5 rounded-2xl cursor-default"
                   >
                     <img
                       src={s.logo}

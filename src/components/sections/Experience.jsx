@@ -40,12 +40,7 @@ export default function Experience() {
           <div className="flex flex-col gap-8">
             {experiences.map((e, i) => (
               <FadeSection key={e.role} delay={i * 0.1}>
-                <div
-                  className="relative pl-16"
-                  style={{ transition: "transform 120ms ease", willChange: "transform" }}
-                  onMouseEnter={e => e.currentTarget.style.transform = "translateX(3px)"}
-                  onMouseLeave={e => e.currentTarget.style.transform = "translateX(0)"}
-                >
+                <div className="relative pl-16">
                   {/* Timeline dot */}
                   <div className="absolute left-4 top-6 -translate-x-1/2 flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full border-2 border-violet-500 bg-[#0d0d14] shadow-lg shadow-violet-500/30" />
@@ -54,7 +49,7 @@ export default function Experience() {
                     )}
                   </div>
 
-                  <div className="rounded-2xl border border-white/8 bg-white/3 p-6 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all duration-300">
+                  <div className="glass glass-slide rounded-2xl p-6">
                     <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                       <div className="flex items-start gap-4">
                         {/* Company logo */}
@@ -80,8 +75,8 @@ export default function Experience() {
                     </div>
 
                     <div className="flex flex-wrap gap-3 text-sm text-zinc-500 mb-4">
-                      <span>📅 {e.period} · {e.duration}</span>
-                      <span>📍 {e.location}</span>
+                      <span>{e.period} · {e.duration}</span>
+                      <span>{e.location}</span>
                     </div>
 
                     <p className="text-zinc-300 text-base leading-relaxed mb-4">
