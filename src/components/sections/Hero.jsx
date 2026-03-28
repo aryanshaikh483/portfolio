@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { useTypingEffect } from "../../hooks/useTypingEffect.js";
 
 const stats = [
-  { num: "2+", label: "Years of coding" },
-  { num: "2+", label: "AI Projects" },
+  { num: "3+", label: "Years of coding" },
+  { num: "2", label: "Projects" },
   { num: "2", label: "Certifications" },
 ];
 
