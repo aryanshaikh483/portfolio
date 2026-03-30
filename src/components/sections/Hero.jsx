@@ -35,10 +35,11 @@ export default function Hero() {
           className="max-w-xl"
         >
           {/* Name */}
-          <h1 className="text-7xl md:text-[9rem] font-black text-white leading-none tracking-tight mb-2">
+          <h1 className="text-[clamp(3rem,12vw,9rem)] font-black text-white leading-none tracking-tight mb-2">
             ARYAN
           </h1>
-          <h1 className="text-7xl md:text-[9rem] font-black leading-none tracking-tight mb-6"
+          <h1
+            className="text-[clamp(3rem,12vw,9rem)] font-black leading-none tracking-tight mb-6"
             style={{ WebkitTextStroke: "2px rgba(124,58,237,0.8)", color: "transparent" }}
           >
             SHAIKH
@@ -61,12 +62,6 @@ export default function Hero() {
               className="px-7 py-2.5 rounded-sm border border-white/30 text-white text-sm font-semibold tracking-widest uppercase hover:bg-white/10 transition-all duration-200"
             >
               Resume
-            </a>
-            <a
-              href="#projects"
-              className="px-7 py-2.5 rounded-sm border border-violet-500/60 text-violet-300 text-sm font-semibold tracking-widest uppercase hover:bg-violet-500/20 transition-all duration-200"
-            >
-              Portfolio
             </a>
           </motion.div>
 
