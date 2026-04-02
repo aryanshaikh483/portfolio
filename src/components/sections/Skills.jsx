@@ -143,20 +143,13 @@ export default function Skills() {
 
               <h3 className="text-sm font-bold tracking-[0.25em] uppercase text-white mb-4">Certifications</h3>
               <ul className="flex flex-col gap-3 mb-10">
-                {["Google — Digital Marketing", "AWS Cloud Practitioner"].map((c) => (
+                {["SQL Query Optimization-Simplilearn", "AWS Cloud Practitioner"].map((c) => (
                   <li key={c} className="text-zinc-400 text-sm flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0" />
                     {c}
                   </li>
                 ))}
               </ul>
-
-              <h3 className="text-sm font-bold tracking-[0.25em] uppercase text-white mb-4">Hobbies & Interests</h3>
-              <div className="flex flex-wrap gap-3">
-                {["Reading", "Photography", "Open Source", "Travel"].map((h) => (
-                  <span key={h} className="glass px-3 py-1.5 rounded-xl text-sm text-zinc-400">{h}</span>
-                ))}
-              </div>
             </div>
           </FadeSection>
 
