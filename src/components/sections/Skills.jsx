@@ -150,6 +150,13 @@ export default function Skills() {
                   </li>
                 ))}
               </ul>
+
+              <h3 className="text-sm font-bold tracking-[0.25em] uppercase text-white mb-4">Hobbies & Interests</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Gaming", "Sketching", "Cricket"].map((h) => (
+                  <span key={h} className="glass px-3 py-1.5 rounded-xl text-sm text-zinc-400">{h}</span>
+                ))}
+              </div>
             </div>
           </FadeSection>
 
