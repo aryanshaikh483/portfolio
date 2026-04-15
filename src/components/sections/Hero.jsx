@@ -58,9 +58,15 @@ export default function Hero() {
             className="flex gap-4 mb-16"
           >
             <a
-              href="#about"
-              className="px-7 py-2.5 rounded-sm border border-white/30 text-white text-sm font-semibold tracking-widest uppercase hover:bg-white/10 transition-all duration-200"
+              href="/My_Resume.pdf"
+              download
+              className="px-7 py-2.5 rounded-sm border border-white/30 text-white text-sm font-semibold tracking-widest uppercase hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
             >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
               Resume
             </a>
           </motion.div>
