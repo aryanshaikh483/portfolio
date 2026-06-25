@@ -5,7 +5,7 @@ const experiences = [
     role: "SEO & Frontend Associate",
     company: "Scrapiz",
     type: "Internship",
-    period: "Feb 2026 – Present",
+    period: "Feb 2026 – May 2026",
     location: "Mumbai, Maharashtra · Remote",
     description: "SEO strategy and frontend optimization — improving search visibility, keyword reach, page scalability, and overall user experience.",
     tags: ["Front-End Development", "SEO"],
@@ -39,12 +39,11 @@ export default function Experience() {
                     <div className="flex-1">
                       <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
                         <h3 className="text-white text-xl font-bold">{e.role}</h3>
-                        {e.current && (
-                          <span className="flex items-center gap-1.5 text-sm text-green-400">
-                            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                            Current
-                          </span>
-                        )}
+                        {/* {e.current && (
+                          // <span className="flex items-center gap-1.5 text-sm text-green-400">
+                          //   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                          // </span>
+                        )} */}
                       </div>
                       <p className="text-violet-400 text-sm font-medium">{e.company} · {e.type}</p>
                     </div>
